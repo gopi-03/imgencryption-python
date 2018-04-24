@@ -100,7 +100,6 @@ class Ui_Dialog(object):
 
 
 if __name__ == "__main__":
-    print(sys.path)
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()

@@ -197,6 +197,7 @@ class Ui_EDwindow(object):
         users_list = []
         for user in conn.cursor().execute('SELECT * FROM users'):
             users_list.append(user[0])
+        users_list.remove(Ui_EDwindow.userid)
         self.userslistTable.setRowCount(len(users_list))
         self.userslistTable.setColumnCount(1)
         self.userslistTable.setHorizontalHeaderLabels(("UsersList",))

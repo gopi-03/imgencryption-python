@@ -68,7 +68,7 @@ class ExtendedImage(object):
                 sha3_512(rawhash[64:128].encode()).hexdigest()
         for i in range(0, len(rawhash)):
             raw += bin(ord(rawhash[i]))[2:]
-        raw = raw[:1601]
+        raw = raw[:1602]
         i = count = 0
         rawlen = len(raw)
         keylen = len(bin(max(self.width, self.height)))
@@ -107,6 +107,6 @@ class ExtendedImage(object):
 
 
 if __name__ == "__main__":
-    image = ExtendedImage(Image.open("/home/krishna/Desktop/testimages/example.png"))
-    image.encryptimg("sdlfkjaldskfja", "/home/krishna/Desktop/encrypted.png")
-    image.decryptimg("sdlfkjaldskfja", "/home/krishna/Desktop/decrypted.png")
+    image = ExtendedImage(Image.open("/home/krishna/Desktop/ImageEd/testimages/colored.jpg"))
+    image.encryptimg("lUUH9d2hg8WEt28Uyg2uHg72", "/home/krishna/Desktop/encrypted.png")
+    image.decryptimg("lUUH9d2hg8WEt28Uyg2uHg71", "/home/krishna/Desktop/decrypted.png")
